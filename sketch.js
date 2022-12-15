@@ -133,7 +133,7 @@ function zapPet(i) {
 
 function resetPet(i) {
 
-    species[i] = random(petStrings.pets);
+    species[i] = random(petStrings.pets.slice(4));
     ids[i] = species[i][int(random(0, 4))];
     names[i] = getName();
     // lastZapped[i] = -1; // can't constantly disown and zap
