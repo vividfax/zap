@@ -38,12 +38,12 @@ function setup() {
         names = [];
         lastZapped = [-1, -1, -1, -1, -1, -1];
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 5; i++) {
             resetPet(i);
         }
     }
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         setupHTML(i);
         setupButtons(i);
     }
@@ -53,7 +53,7 @@ function setup() {
 
 function draw() {
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         setupHTML(i);
     }
 }
