@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zap!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="sketch.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(./background.png);
+            font-family: 'Chelsea Market', monospace;
+            color: #6A3260;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #wrapper {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .name {
+            font-size: x-large;
+            margin: -35px 0 35px 0;
+        }
+
+        button {
+            font-family: 'Fira Code', monospace;
+            padding: 5px 10px;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div>
+            <h1>Zap!</h1>
+        </div>
+        <div>
+            <p>Welcome to the zappery, where you can zap each of your pets once per day!</p>
+        </div>
+        <div style="display:inline-block;">
+            <img id="pet0" style="width: 300px;">
+            <p class ="name" id="name0"></p>
+            <p><button id="zapButton0">Zap!</button></p>
+            <p><button id="byeButton0"></button></p>
+        </div>
+        <div style="display:inline-block;">
+            <img id="pet1" style="width: 300px;">
+            <p class ="name" id="name1"></p>
+            <p><button id="zapButton1">Zap!</button></p>
+            <p><button id="byeButton1"></button></p>
+        </div>
+        <div style="display:inline-block;">
+            <img id="pet2" style="width: 300px;">
+            <p class ="name" id="name2"></p>
+            <p><button id="zapButton2">Zap!</button></p>
+            <p><button id="byeButton2"></button></p>
+        </div>
+        <div style="display:inline-block;">
+            <img id="pet3" style="width: 300px;">
+            <p class ="name" id="name3"></p>
+            <p><button id="zapButton3">Zap!</button></p>
+            <p><button id="byeButton3"></button></p>
+        </div>
+        <div style="display:inline-block;">
+            <img id="pet4" style="width: 300px;">
+            <p class ="name" id="name4"></p>
+            <p><button id="zapButton4">Zap!</button></p>
+            <p><button id="byeButton4"></button></p>
+        </div>
+        <div style="display:inline-block;">
+            <img id="pet5" style="width: 300px;">
+            <p class ="name" id="name5"></p>
+            <p><button id="zapButton5">Zap!</button></p>
+            <p><button id="byeButton5"></button></p>
+        </div>
+        <div id="archive">
+            <br><br><br><hr><br>
+            <div><h2>Former pets</h2></div>
+            <div><p id="nameArchive"></p></div>
+        </div>
+    </div>
+</body>
+</html>
