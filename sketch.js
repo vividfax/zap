@@ -22,7 +22,7 @@ function preload() {
 
 function setup() {
 
-    // clearStorage();
+    clearStorage();
 
     nameArchive = getItem("nameArchive");
     if (nameArchive == null) nameArchive = [];
@@ -64,7 +64,9 @@ function setupHTML(i) {
 
     setImg(petImg[i], ids[i]);
 
-    select("#name" + i).html(names[i]);
+    if (select("#name" + i).value() == "") {
+        select("#name" + i).value(names[i]);
+    }
 
     zapButton[i] = select("#zapButton" + i);
     zapButton[i].html("Zap " + names[i] + "!");
@@ -137,6 +139,7 @@ function resetPet(i) {
     ids[i] = species[i][int(random(0, 4))];
     names[i] = getName();
     // lastZapped[i] = -1; // can't constantly disown and zap
+    select("#name" + i).value(names[i]);
     saveData();
 
     setupHTML(i);
@@ -177,4 +180,14 @@ function getName() {
     name = name.replace(/^\w/, (c) => c.toUpperCase());
 
     return name;
+}
+
+function keyPressed() {
+
+    for (let i = 0; i < 5; i++) {
+        names[i] = select("#name" + i).value();
+        select("#name" + i).value(names[i]);
+    }
+
+    saveData();
 }
