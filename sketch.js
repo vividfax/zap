@@ -22,7 +22,7 @@ function preload() {
 
 function setup() {
 
-    clearStorage();
+    // clearStorage();
 
     nameArchive = getItem("nameArchive");
     if (nameArchive == null) nameArchive = [];
