@@ -116,7 +116,7 @@ function zapPet(i) {
 
         randomId = random(species[i].slice(4));
 
-        while (ids == randomId) {
+        while (ids[i] == randomId) {
             randomId = random(species[i].slice(4));
         }
     }
